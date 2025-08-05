@@ -21,7 +21,7 @@ jobs:
     - name: Grant mvnw permission
       run: chmod +x ./mvnw
 
-    - name: Build with Maven Wrapper
+    - name: Build with Maven Wrapper (with tests)
       run: ./mvnw clean verify
 
     - name: Upload JAR as artifact
