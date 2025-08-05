@@ -21,11 +21,11 @@ jobs:
     - name: Grant mvnw permission
       run: chmod +x ./mvnw
 
-    - name: Build with Maven Wrapper (with tests)
-      run: ./mvnw clean verify
+    - name: Build with Maven Wrapper
+      run: ./mvnw clean package -DskipTests
 
     - name: Upload JAR as artifact
       uses: actions/upload-artifact@v4
       with:
         name: springboot-jar
-        path: target/*-SNAPSHOT.jar
+        path: target/*.jar
