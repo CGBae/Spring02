@@ -39,7 +39,7 @@ pipeline {
                     docker tag ex02-app:latest $DOCKERHUB_USERNAME/ex02-app:latest
                     docker push $DOCKERHUB_USERNAME/ex02-app:latest
                     '''
-                }
+                } 
             }
         }
     }
